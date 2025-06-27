@@ -76,6 +76,7 @@ class IOSExtraction(MVTModule):
             raise DatabaseCorruptedError(
                 "failed to recover without sqlite3 binary: please install sqlite3!"
             )
+            
         if '"' in file_path:
             raise DatabaseCorruptedError(
                 f"database at path '{file_path}' is corrupted. unable to "
